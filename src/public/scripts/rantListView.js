@@ -1,6 +1,5 @@
 var RantView = Backbone.View.extend({
-
-  template: function(rant) {
+  template: function (rant) {
     return `<div class="rant">
               <img src="${rant.imageURL}" alt="${rant.name}" />
               <div class="rant-content">
@@ -14,45 +13,45 @@ var RantView = Backbone.View.extend({
             </div>`;
   },
 
-  initialize: function() {
-    this.model.on('change', this.render, this);
-    this.$el.on('click', function(evt) {
-      if (evt.target.matches('.js-delete')) {
-        this.onDelete(evt);
-      }
-    }.bind(this));
+  initialize: function () {
+    this.model.on("change", this.render, this);
+    this.$el.on(
+      "click",
+      function (evt) {
+        if (evt.target.matches(".js-delete")) {
+          this.onDelete(evt);
+        }
+      }.bind(this),
+    );
   },
 
-  render: function() {
+  render: function () {
     this.$el.html(this.template(this.model.toJSON()));
     return this;
   },
 
-  onDelete: function() {
-    setTimeout(function() {
+  onDelete: function () {
+    setTimeout(function () {
       this.model.destroy();
       this.remove();
     });
-  }
-
+  },
 });
 
 var RantListView = Backbone.View.extend({
-
-  initialize: function() {
-    this.collection.on('reset', this.render, this);
-    this.collection.on('add', this.renderStatement, this);
+  initialize: function () {
+    this.collection.on("reset", this.render, this);
+    this.collection.on("add", this.renderStatement, this);
   },
 
-  render: function() {
-    this.$el.html('');
+  render: function () {
+    this.$el.html("");
     this.collection.each(this.renderStatement, this);
     return this;
   },
 
-  renderStatement: function(model) {
+  renderStatement: function (model) {
     var view = new RantView({ model: model });
     this.$el.prepend(view.render().$el);
-  }
-
+  },
 });

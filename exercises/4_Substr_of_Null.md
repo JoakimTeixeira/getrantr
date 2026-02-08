@@ -1,26 +1,19 @@
-Exercise 4 - Substr of Null
-================
+# Exercise 4 - Substr of Null
 
 # Goal
+
 Why does a single user get `cannot read substr of null` errors?
 
-
 # Evidence
+
 - Using "Alt Todd" Account (`node import 3`)
 - UI is not fully shown
 - Error visible in console
 
-
 # Concepts
+
 - Chrome Network Inspector and Preview
 - Chrome Source debugger and stepping
-
-
-
-
-
-
-
 
 # Spoilers (Try Yourself First)
 

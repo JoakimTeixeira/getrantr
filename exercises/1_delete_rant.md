@@ -1,15 +1,15 @@
-Exercise 1 - Delete Rant
-================
+# Exercise 1 - Delete Rant
 
 # Goal
+
 User should be able to delete a rant from their timeline using the "delete" control.
 
-
 # Evidence
+
 - User cannot delete a rant from their timeline.
 
-
 # Concepts
+
 - Using Keystone Users (`node import 2`)
 - [Setting up Workspaces](https://developers.google.com/web/tools/setup/setup-workflow)
   - Chrome > Sources > Context Menu > Add Folder to Workspace
@@ -19,16 +19,6 @@ User should be able to delete a rant from their timeline using the "delete" cont
 - Chrome "Persist Log"
 - Chrome DOM Event Listeners
 - [Chrome Async Stack traces](https://www.html5rocks.com/en/tutorials/developertools/async-call-stack/)
-
-
-
-
-
-
-
-
-
-
 
 # Spoilers (Try Yourself First)
 

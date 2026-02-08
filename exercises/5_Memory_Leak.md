@@ -1,25 +1,20 @@
-Exercise 5 - Memory Leak
-================
+# Exercise 5 - Memory Leak
 
 # Goal
+
 Locate the source of the largest uncollected memory allocations in getRANTR
 
-
 # Evidence
+
 - Using "Keystone" Account (`node import 2`)
 - Users report slowing performance
 - Conduct a memory profile (for at least 30 seconds)
 
-
 # Concepts
+
 - [Chrome Allocation Snapshots](https://developers.google.com/web/tools/chrome-devtools/memory-problems/allocation-profiler)
 - [Chrome Timeline](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/timeline-tool)
 - Timeline with JS Profile and Memory checked
-
-
-
-
-
 
 # Spoilers (Try Yourself First)
 

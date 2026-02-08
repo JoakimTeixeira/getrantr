@@ -1,11 +1,10 @@
-var bodyParser = require('body-parser');
+var bodyParser = require("body-parser");
 
 var jsonParser = bodyParser.json();
-var baseURL = '/api/rants';
+var baseURL = "/api/rants";
 
 module.exports = (app, db) => {
-
-  app.get(baseURL, function(req, res, next) {
+  app.get(baseURL, function (req, res, next) {
     db.rants
       .find({})
       .sort({ timestamp: 1 })
@@ -18,7 +17,7 @@ module.exports = (app, db) => {
   app.post(baseURL, jsonParser, (req, res, next) => {
     var text = (req.body || {}).text;
     if (!text) {
-      res.status(400).json({ message: 'text must not be empty' });
+      res.status(400).json({ message: "text must not be empty" });
       return next();
     }
     db.users
@@ -29,7 +28,7 @@ module.exports = (app, db) => {
           text: text,
           timestamp: new Date().toISOString(),
           name: user[0].name,
-          imageURL: user[0].imageURL
+          imageURL: user[0].imageURL,
         };
         db.rants.insert(rant, (err, saved) => {
           res.json(saved);
@@ -38,11 +37,10 @@ module.exports = (app, db) => {
       });
   });
 
-  app.delete(baseURL + '/:id', (req, res, next) => {
+  app.delete(baseURL + "/:id", (req, res, next) => {
     db.rants.remove({ _id: req.params.id }, (err, removed) => {
       res.json({});
       next();
     });
   });
-
 };

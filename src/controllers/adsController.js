@@ -1,7 +1,6 @@
-
-var ID_CHARS = '23456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz';
+var ID_CHARS = "23456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz";
 function getAdvertiserId() {
-  var res = '';
+  var res = "";
   for (var i = 0; i < 5000; i++) {
     res += ID_CHARS.charAt(Math.floor(Math.random() * ID_CHARS.length));
   }
@@ -9,11 +8,12 @@ function getAdvertiserId() {
 }
 
 function shuffle(array) {
-  var currentIndex = array.length, temporaryValue, randomIndex;
+  var currentIndex = array.length,
+    temporaryValue,
+    randomIndex;
 
   // While there remain elements to shuffle...
   while (0 !== currentIndex) {
-
     // Pick a remaining element...
     randomIndex = Math.floor(Math.random() * currentIndex);
     currentIndex -= 1;
@@ -28,18 +28,14 @@ function shuffle(array) {
 }
 
 module.exports = (app, db) => {
-
-  app.get('/api/ads', (req, res, next) => {
-    db.ads
-      .find({})
-      .exec((err, docs) => {
-        for (var i = 0; i < docs.length; i++) {
-          docs[i].advertiserId = getAdvertiserId();
-        }
-        var ads = shuffle(docs);
-        res.json(ads);
-        next();
-      });
+  app.get("/api/ads", (req, res, next) => {
+    db.ads.find({}).exec((err, docs) => {
+      for (var i = 0; i < docs.length; i++) {
+        docs[i].advertiserId = getAdvertiserId();
+      }
+      var ads = shuffle(docs);
+      res.json(ads);
+      next();
+    });
   });
-
 };

@@ -1,27 +1,20 @@
-Exercise 6 - Load Performance
-================
+# Exercise 6 - Load Performance
 
 # Goal
+
 Locate 3 sources with impact on load performance
 
-
 # Evidence
+
 - Users report the site is slow to load.
 - Simulate with Network Throttle: Chrome > Network > Throttle > Good 3G
 - Run Timeline: Network, Screenshots, Memory
 
-
 # Concepts
+
 - [Chrome Network Throttle](https://developers.google.com/web/tools/chrome-devtools/network-performance/network-conditions)
 - [Chrome Timeline](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/timeline-tool)
 - Timeline with Network, Screenshots, and Memory checked
-
-
-
-
-
-
-
 
 # Spoilers (Try Yourself First)
 

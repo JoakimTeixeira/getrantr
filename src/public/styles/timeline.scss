@@ -1,8 +1,8 @@
 #add-rant {
-
   padding: 20px 0;
 
-  label, textarea {
+  label,
+  textarea {
     display: block;
     margin: 5px 0;
   }
@@ -25,11 +25,9 @@
     border: 1px solid $color-secondary-1-4;
     cursor: pointer;
   }
-
 }
 
 #timeline {
-
   margin-top: 40px;
 
   .rant {
@@ -52,12 +50,11 @@
       margin-bottom: -60px;
       min-height: 60px;
     }
-    form { display: inline; }
+    form {
+      display: inline;
+    }
     .rant-meta {
       margin-left: 70px;
     }
-
-
   }
-
 }

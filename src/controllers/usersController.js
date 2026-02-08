@@ -1,6 +1,5 @@
 module.exports = (app, db) => {
-
-  app.get('/api/user', function(req, res, next) {
+  app.get("/api/user", function (req, res, next) {
     db.users
       .find({})
       .sort({ timestamp: 1 })
@@ -9,5 +8,4 @@ module.exports = (app, db) => {
         next();
       });
   });
-
 };

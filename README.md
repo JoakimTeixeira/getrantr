@@ -20,6 +20,7 @@ You may also need the following tools to enhance or debug getRANTR:
 - [Chrome](https://www.google.com/chrome/) web browser
 
 **Optional**
+
 - [Charles](https://www.charlesproxy.com/) or [Fiddler](http://www.telerik.com/fiddler) web proxy
 
 ### Installation

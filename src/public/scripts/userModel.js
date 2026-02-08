@@ -1,4 +1,4 @@
 var UserModel = Backbone.Model.extend({
-  idAttribute: '_id',
-  url: '/api/user/'
+  idAttribute: "_id",
+  url: "/api/user/",
 });

@@ -1,26 +1,19 @@
-Exercise 7 - Third Party
-================
+# Exercise 7 - Third Party
 
 # Goal
+
 Why did we get "form.submit is not a function" suddenly?
 
-
 # Evidence
+
 - (Remember to remove the previous network throttle)
 - Signup form on `http://www.getrantr.com:9000/signup.html` is broken.
 - Code from remove vendor script breaking form submit.
-- Fix issue *WITHOUT* changing anything in vendor/analytics.js
-
+- Fix issue _WITHOUT_ changing anything in vendor/analytics.js
 
 # Concepts
+
 - Third party scripts.
-
-
-
-
-
-
-
 
 # Spoilers (Try Yourself First)
 

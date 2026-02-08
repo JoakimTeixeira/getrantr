@@ -2,6 +2,6 @@
   "globals": {
     "$": true,
     "Backbone": true,
-    "moment": true
-  }
+    "moment": true,
+  },
 }

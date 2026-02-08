@@ -1,20 +1,32 @@
 /**
  * Reset some basic elements
  */
-body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+hr,
+dl,
+dd,
+ol,
+ul,
+figure {
   margin: 0;
   padding: 0;
 }
-
-
 
 /**
  * Basic styling
  */
 body {
-  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+  font: $base-font-weight #{$base-font-size}/#{$base-line-height}
+    $base-font-family;
   color: $text-color;
   background-color: $background-color;
   -webkit-text-size-adjust: 100%;
@@ -25,19 +37,25 @@ body {
   font-kerning: normal;
 }
 
-
-
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
-ul, ol, dl, figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+ul,
+ol,
+dl,
+figure,
 %vertical-rhythm {
   margin-bottom: calc($spacing-unit / 2);
 }
-
-
 
 /**
  * Images
@@ -46,8 +64,6 @@ img {
   max-width: 100%;
   vertical-align: middle;
 }
-
-
 
 /**
  * Figures
@@ -60,36 +76,32 @@ figcaption {
   font-size: $small-font-size;
 }
 
-
-
 /**
  * Lists
  */
-ul, ol {
+ul,
+ol {
   margin-left: $spacing-unit;
 }
 
 li {
   > ul,
   > ol {
-     margin-bottom: 0;
+    margin-bottom: 0;
   }
 }
 
 .pull-right {
-  float:right;
+  float: right;
 }
 .pull-left {
   float: left;
 }
 
-
-
 /**
  * Clearfix
  */
 %clearfix {
-
   &:after {
     content: "";
     display: table;
@@ -98,10 +110,9 @@ li {
 }
 
 .clearfix {
-
-    &:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }

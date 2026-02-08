@@ -1,30 +1,19 @@
-Exercise 3 - 400 Server Responses
-================
+# Exercise 3 - 400 Server Responses
 
 # Goal
+
 Identify cause and resolve 400's responses from the server.
 
-
 # Evidence
+
 - Monitoring reporting large numbers of 400 responses from `POST /api/rants`
 - User enters 0 characters into textarea#rant_text
 - User clicks submit button
 
-
 # Concepts
+
 - Chrome Network Inspector and Preview
 - Chrome Source debugger and stepping
-
-
-
-
-
-
-
-
-
-
-
 
 # Spoilers (Try Yourself First)
 
