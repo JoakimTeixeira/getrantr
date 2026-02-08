@@ -1,3 +1,11 @@
+// Polyfill for util.isDate, removed in Node.js 23.0.0 (2024)
+const util = require("util");
+if (!util.isDate) {
+  util.isDate = function (value) {
+    return value instanceof Date;
+  };
+}
+
 var Datastore = require("nedb");
 
 var db = {};
@@ -242,7 +250,7 @@ function importDonald(db, callback) {
   rants.push({
     name: user.name,
     imageURL: user.imageURL,
-    text: "Dopey Prince @Alwaleed_Talal wants to control our U.S. politicians with daddy’s money. Can’t do it when I get elected. #Trump2016",
+    text: "Dopey Prince @Alwaleed_Talal wants to control our U.S. politicians with daddy's money. Can't do it when I get elected. #Trump2016",
     timestamp: new Date(new Date() * 1 - 1000 * 3600 * 56).toISOString(),
   });
   rants.push({
