@@ -4,3 +4,7 @@ node_modules
 
 # Built Assets
 src/public/index.css
+
+# DevTools Workspace Configuration
+# https://chromium.googlesource.com/devtools/devtools-frontend/+/main/docs/ecosystem/automatic_workspace_folders.md
+src/public/.well-known
