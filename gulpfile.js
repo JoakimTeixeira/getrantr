@@ -1,3 +1,4 @@
+const browserSync = require("browser-sync").create();
 const gulp = require("gulp");
 const nodemon = require("gulp-nodemon");
 const gulpSass = require("gulp-sass")(require("sass"));
@@ -38,12 +39,35 @@ function sass() {
 
 exports.sass = sass;
 
-exports.start = gulp.series(generateDevtoolsWorkspaceConfig, sass, () => {
+function setupBrowserSync() {
+  browserSync.init({
+    proxy: "localhost:9000",
+    port: 3000,
+    files: ["src/public/**/*.*"],
+  });
+}
+
+function startNodemon() {
   return nodemon({
     script: "src/index.js",
-    tasks: ["sass"],
-    ignore: ["node_modules/", "data/", "src/public/.well-known/"],
-    ext: "js html scss",
+    watch: ["src/**/*.js", "*.js"],
+    ignore: [
+      "node_modules/",
+      "data/",
+      "src/public/",
+      "gulpfile.js",
+      "package*.json",
+    ],
+    ext: "js",
     env: { NODE_ENV: "development" },
+  }).on("start", () => {
+    browserSync.reload();
   });
-});
+}
+
+function serve() {
+  setupBrowserSync();
+  return startNodemon();
+}
+
+exports.start = gulp.series(generateDevtoolsWorkspaceConfig, sass, serve);

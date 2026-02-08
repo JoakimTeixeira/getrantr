@@ -28,6 +28,7 @@
     "node": "18.18.2"
   },
   "devDependencies": {
+    "browser-sync": "^3.0.4",
     "gulp": "4.0.2",
     "gulp-nodemon": "2.5.0",
     "gulp-sass": "5.1.0",
